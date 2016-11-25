@@ -2,8 +2,7 @@
     $(function () {
         $('#userlist').datagrid({
             url: '{:U(\'user/UserListForEasy\')}',
-            title: '用户列表',
-            width: 700,
+            fit:true,
             height: 'auto',
             fitColumns: true,
             singleSelect: true,
@@ -95,6 +94,4 @@
     }
     false
 </script>
-<div>
-    <table id="userlist"></table>
-</div>
+<table id="userlist"></table>

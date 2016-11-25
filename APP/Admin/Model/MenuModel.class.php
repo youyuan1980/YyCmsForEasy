@@ -27,9 +27,8 @@ class MenuModel extends Model
 	            $isparent = ",isParent:true";
 	        }
             if ($row["url"]!="") {
-                $url=",myurl:\"" . U($row["url"]) . "\"";
+                $url=",myurl:\"" . U($row["url"]) . "\",";
             }
-
 	        $json = $json."{\"id\":\"" . $id . "\",\"pId\":\"" . $pid . "\",open:true,\"name\":\"" . $name . "\"" . $isparent . $url . "}";
     	}
     	$json=$json.']';

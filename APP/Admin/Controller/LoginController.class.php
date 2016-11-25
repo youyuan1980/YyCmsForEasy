@@ -29,7 +29,7 @@ class LoginController extends Controller
                 	session("userid",$userid);
                 	$dt=$user->where("userid='".$userid."'")->find();
                 	session("username",$dt["username"]);
-                	$this->success('登陆成功',U('index/index'),3);
+                    $this->success('登陆成功',U('index/index'),3);
                 	break;
                 case '2':
                     $this->error('密码错误',U('login/login'),3);
@@ -43,8 +43,8 @@ class LoginController extends Controller
         }
         else
         {
-            $this->error('非法操作',U('login/login'),5);
+            $this->error('非法操作',U('login/login'),3);
         }
 	}
 }
- ?>
+?>

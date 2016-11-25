@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/yycms/Public/css/css.css"/>
-    <link rel="stylesheet" type="text/css" href="/yycms/Public/Bootstrap/css/bootstrap.min.css"/>
-    <script type="text/javascript" src="/yycms/Public/script/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/yycmsforeasy/Public/css/css.css"/>
+    <link rel="stylesheet" type="text/css" href="/yycmsforeasy/Public/Bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="/yycmsforeasy/Public/script/jquery-1.7.2.min.js"></script>
     <script>
         function del_article (id) {
             // body...
@@ -29,14 +29,14 @@
                 <div class="PageTitle">信息管理 > 信息列表</div>
             </div>
             <div class="PageToolBar">
-                <img src="/yycms/Public/Images/add.gif"><a href="<?php echo ($addurl); ?>">添加信息</a>
+                <img src="/yycmsforeasy/Public/Images/add.gif"><a href="<?php echo ($addurl); ?>">添加信息</a>
             </div>
             <div id="PageTitle">
                     <?php echo ($classurl); ?>
                     <br>标题：
                   <input type="text" value="<?php echo ($tbtitle); ?>" id="TbTitle" name="TbTitle" width="83"/>
                     &nbsp;
-                    <img src="/yycms/Public/images/search.gif" alt="#" onclick="search();" style=" cursor: hand; "/>
+                    <img src="/yycmsforeasy/Public/images/search.gif" alt="#" onclick="search();" style=" cursor: hand; "/>
                 </div>
             <div id="container">
                 <div id="content">

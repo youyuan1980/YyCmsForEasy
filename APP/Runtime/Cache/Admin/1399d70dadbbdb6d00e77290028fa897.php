@@ -3,8 +3,8 @@
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="/yycms/Public/script/jquery-1.7.2.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/yycms/Public/css/css.css"/>
+    <script type="text/javascript" src="/yycmsforeasy/Public/script/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/yycmsforeasy/Public/css/css.css"/>
     <script>
     function changpwd () {
         var oldpwd=$("#oldpwd").attr("value");
@@ -29,7 +29,7 @@
             <div class="PageTitle">当前位置 > 修改密码</div>
         </div>
         <div class="PageToolBar" id="PageToolBar">
-        <img src="/yycms/Public/Images/edit.gif" /><a href="#" onclick="changpwd();" >保存</a>
+        <img src="/yycmsforeasy/Public/Images/edit.gif" /><a href="#" onclick="changpwd();" >保存</a>
             </div>
         <div id="container">
             <div id="content">
