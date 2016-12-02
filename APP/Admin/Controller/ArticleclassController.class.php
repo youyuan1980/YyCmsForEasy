@@ -6,12 +6,7 @@ class ArticleclassController extends BaseController
 {
 	public function ArticleClassList()
 	{
-		$p=I('get.p');
-		if ($p=="") {
-			$p=1;
-		}
 		$pid=I('get.pid','-1');
-		$tbtitle=I('get.TbTitle','');
 		$articleclassherf="";
 		$articleclass=M('article_classlist');
 		if ($pid=="-1") {
@@ -26,26 +21,29 @@ class ArticleclassController extends BaseController
 				$articleclassherf="返回上级目录："."<a href='".$url."'>".$row["title"]."</a>&nbsp;&nbsp;";
 			}
 		}
-		$count=$articleclass->where("title like '%".$tbtitle."%' and parentid='".$pid."'")
-					->count();
-		$page=new Page($count,C('PAGE_SIZE'));
-		$page->setConfig('header', '<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
-	    $page->setConfig('prev', '上一页');
-	    $page->setConfig('next', '下一页');
-	    $page->setConfig('last', '末页');
-	    $page->setConfig('first', '首页');
-	    $page->setConfig('theme', '%FIRST%%UP_PAGE%%LINK_PAGE%%DOWN_PAGE%%END%%HEADER%');
-	    $page->lastSuffix = false;//最后一页不显示为总页数
-		$list=$articleclass->field("ID,TITLE,PARENTID")->where("title like '%".$tbtitle."%' and parentid='".$pid."'")
-				   ->order('uptime desc')
-				   ->page($p.','.C('PAGE_SIZE'))
-				   ->select();
-		$this->assign('page',$page->show());
-		$this->assign('userlist',$list);
-		$this->assign('tbtitle',$tbtitle);
-		$this->assign('addurl',U('articleclass/add',array('pid'=>$pid)));
 		$this->assign('articleclassherf',$articleclassherf);
 		$this->display('articleclasslist');
+	}
+
+	public function ArticleClassListForSearch()
+	{
+		$p=I('post.page');
+		if ($p=="") {
+			$p=1;
+		}
+		$pid=I('get.pid','-1');
+		$pagesize = I('post.rows');
+		$articleclass=M('article_classlist');
+		$title=I('post.title');
+		$count=$articleclass->where("title like '%".$title."%' and parentid =".$pid)
+					->count();
+		$list=$articleclass->where("title like '%".$title."%' and parentid = ".$pid )
+			->order('uptime desc')
+			->page($p.','.$pagesize)
+			->select();
+		$data["total"]=$count;
+		$data["rows"]=$list;
+		echo json_encode($data);
 	}
 
 	public function edit()

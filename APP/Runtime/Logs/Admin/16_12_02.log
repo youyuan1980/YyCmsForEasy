@@ -1,0 +1,2148 @@
+[ 2016-12-02T14:57:50+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T14:57:53+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-12-02T14:57:56+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/login/dologin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE ( userid='admin' ) LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT `userid`,`userpassword` FROM `users` WHERE ( userid='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `users` WHERE ( userid='admin' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T14:57:57+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0938s ]
+SQL: SELECT `id`,`name`,`pid`,`isparent`,`url` FROM `menu` WHERE ( roleid ='' or roleid in ( select roleid from userinrole where userid='admin') ) ORDER BY menuorder  [ RunTime:0.1875s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T14:57:58+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/main.html?_=1480661877996
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `userinrole` [ RunTime:0.0156s ]
+SQL: SELECT `rolename` FROM `userinrole` INNER JOIN  roles on roles.roleid=userinrole.roleid  WHERE (  userid='admin' )  [ RunTime:0.1719s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T14:58:00+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/userlist.html?_=1480661879983
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T14:58:00+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/userlistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE ( username like '%%' or userid like '%%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `users` WHERE ( username like '%%' or userid like '%%' ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T14:59:49+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/userlist.html?_=1480661989464
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T14:59:49+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/userlistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE ( username like '%%' or userid like '%%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `users` WHERE ( username like '%%' or userid like '%%' ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T14:59:53+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480661993142
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0469s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid='-1' ) LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT `ID`,`TITLE`,`PARENTID` FROM `article_classlist` WHERE ( title like '%%' and parentid='-1' ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T14:59:57+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/article/articlelist.html?_=1480661997470
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT `ID`,`TITLE`,`PARENTID` FROM `article_classlist` WHERE ( PARENTID='-1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `TITLE`,`ID` FROM `article_classlist` WHERE ( PARENTID='-1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0781s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( ISDELETE='0' and title like '%%' and classid='1001' ) LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT `ID`,`TITLE`,`CLASSID` FROM `article` WHERE ( ISDELETE=0 and title like '%%' and classid='1001' ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant classid - assumed 'classid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant classid - assumed 'classid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant classid - assumed 'classid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant classid - assumed 'classid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant classid - assumed 'classid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant classid - assumed 'classid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T14:59:58+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480661998869
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid='-1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ID`,`TITLE`,`PARENTID` FROM `article_classlist` WHERE ( title like '%%' and parentid='-1' ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:00:01+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/userlist.html?_=1480662001481
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:00:01+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/userlistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE ( username like '%%' or userid like '%%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `users` WHERE ( username like '%%' or userid like '%%' ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:00:03+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480662003054
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid='-1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ID`,`TITLE`,`PARENTID` FROM `article_classlist` WHERE ( title like '%%' and parentid='-1' ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant parentid - assumed 'parentid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 53 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:06:03+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480662363037
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: addurl F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 104 行.
+NOTIC: [8] Undefined variable: articleclassherf F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 107 行.
+NOTIC: [8] Undefined variable: tbtitle F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 110 行.
+NOTIC: [8] Undefined variable: userlist F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 119 行.
+NOTIC: [8] Undefined variable: page F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:06:05+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480662364981
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: addurl F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 104 行.
+NOTIC: [8] Undefined variable: articleclassherf F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 107 行.
+NOTIC: [8] Undefined variable: tbtitle F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 110 行.
+NOTIC: [8] Undefined variable: userlist F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 119 行.
+NOTIC: [8] Undefined variable: page F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:06:06+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480662366225
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: addurl F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 104 行.
+NOTIC: [8] Undefined variable: articleclassherf F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 107 行.
+NOTIC: [8] Undefined variable: tbtitle F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 110 行.
+NOTIC: [8] Undefined variable: userlist F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 119 行.
+NOTIC: [8] Undefined variable: page F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:06:42+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/userlist.html?_=1480662402524
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:06:42+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/userlistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE ( username like '%%' or userid like '%%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `users` WHERE ( username like '%%' or userid like '%%' ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:06:43+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480662403403
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: addurl F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 104 行.
+NOTIC: [8] Undefined variable: articleclassherf F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 107 行.
+NOTIC: [8] Undefined variable: tbtitle F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 110 行.
+NOTIC: [8] Undefined variable: userlist F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 119 行.
+NOTIC: [8] Undefined variable: page F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:06:57+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`pid`,`isparent`,`url` FROM `menu` WHERE ( roleid ='' or roleid in ( select roleid from userinrole where userid='admin') ) ORDER BY menuorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:06:57+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/main.html?_=1480662417268
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `userinrole` [ RunTime:0.0000s ]
+SQL: SELECT `rolename` FROM `userinrole` INNER JOIN  roles on roles.roleid=userinrole.roleid  WHERE (  userid='admin' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:06:58+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480662418440
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: addurl F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 104 行.
+NOTIC: [8] Undefined variable: articleclassherf F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 107 行.
+NOTIC: [8] Undefined variable: tbtitle F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 110 行.
+NOTIC: [8] Undefined variable: userlist F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 119 行.
+NOTIC: [8] Undefined variable: page F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:07:21+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480662440998
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:07:21+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0156s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' ) LIMIT 1  
+
+[ 2016-12-02T15:07:27+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0156s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' ) LIMIT 1  
+
+[ 2016-12-02T15:07:28+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' ) LIMIT 1  
+
+[ 2016-12-02T15:10:22+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`pid`,`isparent`,`url` FROM `menu` WHERE ( roleid ='' or roleid in ( select roleid from userinrole where userid='admin') ) ORDER BY menuorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:10:22+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/main.html?_=1480662622266
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `userinrole` [ RunTime:0.0156s ]
+SQL: SELECT `rolename` FROM `userinrole` INNER JOIN  roles on roles.roleid=userinrole.roleid  WHERE (  userid='admin' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:10:23+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480662623435
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: addurl F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 105 行.
+NOTIC: [8] Undefined variable: tbtitle F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 111 行.
+NOTIC: [8] Undefined variable: userlist F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 120 行.
+NOTIC: [8] Undefined variable: page F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:10:34+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480662634611
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:10:34+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' ) LIMIT 1  
+
+[ 2016-12-02T15:10:48+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`name`,`pid`,`isparent`,`url` FROM `menu` WHERE ( roleid ='' or roleid in ( select roleid from userinrole where userid='admin') ) ORDER BY menuorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:10:48+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/main.html?_=1480662648406
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `userinrole` [ RunTime:0.0156s ]
+SQL: SELECT `rolename` FROM `userinrole` INNER JOIN  roles on roles.roleid=userinrole.roleid  WHERE (  userid='admin' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:10:50+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480662650005
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:10:50+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' ) LIMIT 1  
+
+[ 2016-12-02T15:12:45+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480662765629
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:12:45+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+
+[ 2016-12-02T15:12:47+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+
+[ 2016-12-02T15:12:48+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+
+[ 2016-12-02T15:12:48+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0156s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+
+[ 2016-12-02T15:12:48+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+
+[ 2016-12-02T15:12:48+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+
+[ 2016-12-02T15:12:48+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+
+[ 2016-12-02T15:12:49+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+
+[ 2016-12-02T15:13:27+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/ArticleClassListForSearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+ERR: 1054:Unknown column 'title' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `users` WHERE ( title like '%%' and parentid =1 ) LIMIT 1  
+
+[ 2016-12-02T15:14:04+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/ArticleClassListForSearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+ERR: 1146:Table 'yycmsfortp.articleclass' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `articleclass`
+ERR: 1146:Table 'yycmsfortp.articleclass' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `articleclass`
+
+[ 2016-12-02T15:14:37+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/ArticleClassListForSearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+ERR: 1146:Table 'yycmsfortp.article_class' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `article_class`
+ERR: 1146:Table 'yycmsfortp.article_class' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `article_class`
+
+[ 2016-12-02T15:14:38+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/ArticleClassListForSearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+ERR: 1146:Table 'yycmsfortp.article_class' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `article_class`
+ERR: 1146:Table 'yycmsfortp.article_class' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `article_class`
+
+[ 2016-12-02T15:14:50+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/ArticleClassListForSearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: limit F:\mysrc\yycmsforeasy\ThinkPHP\Library\Think\Db\Driver.class.php 第 961 行.
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = 1 ) ORDER BY uptime desc LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:15:37+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/ArticleClassListForSearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: limit F:\mysrc\yycmsforeasy\ThinkPHP\Library\Think\Db\Driver.class.php 第 961 行.
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,20   [ RunTime:0.0156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:15:40+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480662940671
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:15:40+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:17:17+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480663037342
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:17:17+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:17:45+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%1%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%1%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-12-02T15:24:19+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480663459043
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:24:19+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:24:45+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480663485097
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:24:45+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:27:24+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480663644597
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:27:24+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:27:40+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480663660122
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015625s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015625s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:27:40+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:27:43+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist/pid/%2Brow.id%2B.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT `ID`,`TITLE` FROM `article_classlist` WHERE ( ID='+row.id+' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:27:51+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/main.html?_=1480663671575
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `userinrole` [ RunTime:0.0000s ]
+SQL: SELECT `rolename` FROM `userinrole` INNER JOIN  roles on roles.roleid=userinrole.roleid  WHERE (  userid='admin' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:27:53+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480663673402
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:27:53+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:28:17+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480663697202
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:28:17+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:28:53+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480663733214
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant row - assumed 'row' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 32 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\43c97ce36d2beacba8bc88ac9847e16b.php 第 32 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-12-02T15:28:53+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-12-02T15:29:31+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480663770995
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:29:31+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:37:11+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480664231421
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:37:11+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:37:29+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480664249034
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:37:29+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:37:30+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist/pid/8001.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0156s ]
+SQL: SELECT `ID`,`TITLE` FROM `article_classlist` WHERE ( ID='8001' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: pid F:\mysrc\yycmsforeasy\APP\Admin\Controller\ArticleclassController.class.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:37:34+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/main.html?_=1480664254425
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `userinrole` [ RunTime:0.0000s ]
+SQL: SELECT `rolename` FROM `userinrole` INNER JOIN  roles on roles.roleid=userinrole.roleid  WHERE (  userid='admin' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:37:36+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480664256018
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:37:36+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:28+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480664428261
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:28+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:29+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist/pid/8001.html?_=1480664429572
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT `ID`,`TITLE` FROM `article_classlist` WHERE ( ID='8001' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: pid F:\mysrc\yycmsforeasy\APP\Admin\Controller\ArticleclassController.class.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:29+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:36+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist/pid/1003.html?_=1480664435955
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT `ID`,`TITLE` FROM `article_classlist` WHERE ( ID='1003' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: pid F:\mysrc\yycmsforeasy\APP\Admin\Controller\ArticleclassController.class.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:36+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:39+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist/pid/1002.html?_=1480664439914
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT `ID`,`TITLE` FROM `article_classlist` WHERE ( ID='1002' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: pid F:\mysrc\yycmsforeasy\APP\Admin\Controller\ArticleclassController.class.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-12-02T15:40:40+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:45+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist/pid/1008.html?_=1480664445573
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT `ID`,`TITLE` FROM `article_classlist` WHERE ( ID='1008' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: pid F:\mysrc\yycmsforeasy\APP\Admin\Controller\ArticleclassController.class.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:45+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:47+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:49+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/main.html?_=1480664449611
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `userinrole` [ RunTime:0.0156s ]
+SQL: SELECT `rolename` FROM `userinrole` INNER JOIN  roles on roles.roleid=userinrole.roleid  WHERE (  userid='admin' )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:51+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/article/articlelist.html?_=1480664451176
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0156s ]
+SQL: SELECT `ID`,`TITLE`,`PARENTID` FROM `article_classlist` WHERE ( PARENTID='-1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `TITLE`,`ID` FROM `article_classlist` WHERE ( PARENTID='-1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE ( ISDELETE='0' and title like '%%' and classid='1001' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ID`,`TITLE`,`CLASSID` FROM `article` WHERE ( ISDELETE=0 and title like '%%' and classid='1001' ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant classid - assumed 'classid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant classid - assumed 'classid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant classid - assumed 'classid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant classid - assumed 'classid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant classid - assumed 'classid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant classid - assumed 'classid' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\mysrc\yycmsforeasy\APP\Runtime\Cache\Admin\6d8c2e5f3fefbba2f6505f995a7e9a30.php 第 47 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:54+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480664454841
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:40:54+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:41:33+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/userlist.html?_=1480664493509
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:41:33+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/user/userlistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE ( username like '%%' or userid like '%%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `users` WHERE ( username like '%%' or userid like '%%' ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:41:34+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480664494369
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:41:34+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:42:22+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist.html?_=1480664542716
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:42:22+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:42:28+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslist/pid/8001.html?_=1480664548220
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT `ID`,`TITLE` FROM `article_classlist` WHERE ( ID='8001' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: pid F:\mysrc\yycmsforeasy\APP\Admin\Controller\ArticleclassController.class.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-02T15:42:28+08:00 ] 127.0.0.1 /yycmsforeasy/admin.php/articleclass/articleclasslistforsearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() F:\mysrc\yycmsforeasy\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `article_classlist` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_classlist` WHERE ( title like '%%' and parentid =-1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `article_classlist` WHERE ( title like '%%' and parentid = -1 ) ORDER BY uptime desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

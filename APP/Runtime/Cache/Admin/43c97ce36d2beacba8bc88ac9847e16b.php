@@ -1,64 +1,81 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/yycmsforeasy/Public/css/css.css"/>
-    <link rel="stylesheet" type="text/css" href="/yycmsforeasy/Public/Bootstrap/css/bootstrap.min.css"/>
-    <script type="text/javascript" src="/yycmsforeasy/Public/script/jquery-1.7.2.min.js"></script>
-    <script>
-        function del_articleclass(id)
-        {
-            var msg = window.confirm("您确定删除吗?");
-            if (msg) {
-                var url='<?php echo U('articleclass/delarticleclass');?>';
-                var p='<?php echo I('get.p','');?>';
-                var pid='<?php echo I('get.pid','');?>';
-                var tbtitle=$("#TbTitle").attr("value");
-                $.post(url, {pid:pid,p: p,tbtitle:tbtitle,id:id}, function(data) {
-                    alert(data.info);
-                    location.href=data.url;
-                });
-            }
-            else
-            {
-                return false;
-            }
+<script type="text/javascript">
+    $(function () {
+        $('#articleclasslist').datagrid({
+            url: '<?php echo U('articleclass/ArticleClassListForSearch');?>',
+            fit:true,
+            height: 'auto',
+            fitColumns: true,
+            singleSelect: true,
+            pageSize: 10,
+            pageList: [10],
+            pagination: true,
+            columns: [[
+                {field: 'id', title: '栏目ID', width: 200},
+                {field: 'title', title: '栏目名称', width: 500}
+            ]],
+            toolbar:"#toolbar1"
+        });
+    });
+
+    function doSearch()
+    {
+         $('#articleclasslist').datagrid('load',{
+             title: $('#title').attr("value")
+         });
+    }
+
+    function jumpchild()
+    {
+        var row = $('#articleclasslist').datagrid('getSelected');
+        if (row){
+            var url = "<?php echo U('articleclass/articleclasslist',array('pid'=>'class_id'));?>";
+            url = url.replace('class_id',row.id);
+            alert(url);
+            Open('栏目列表',url);
         }
-    </script>
-</head>
-<body>
-    <form id='form1' method="get" action="<?php echo U('articleclass/articleclasslist');?>" >
-        <div>
-            <div class="PageHeader">
-                <div class="PageTitle">栏目管理 > 栏目列表</div>
-            </div>
-            <div class="PageToolBar">
-                <img src="/yycmsforeasy/Public/Images/add.gif"><a href="<?php echo ($addurl); ?>">添加栏目</a>
-            </div>
-            <div id="PageTitle">
-                <?php echo ($articleclassherf); ?>
-                <br>
-                    栏目名称：
-                  <input type="text" value="<?php echo ($tbtitle); ?>" id="TbTitle" name="TbTitle" width="83"/>
-                    &nbsp;
-                    <img src="/yycmsforeasy/Public/images/search.gif" alt="#" onclick="submit();" style=" cursor: hand; "/>
-                </div>
-            <div id="container">
-                <div id="content">
-                    <table border="0" id='articleclasslist' class="table table-hover table-bordered table-condensed">
-                        <thead><tr><th>ID</th><th>标题</th><th>操作</th></tr></thead>
-                        <tbody>
-                            <?php if(is_array($userlist)): $i = 0; $__LIST__ = $userlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><tr><td><?php echo ($item["id"]); ?></td>
-                                <td><?php echo ($item["title"]); ?></td>
-                                <td><a href="<?php echo U('articleclass/edit',array('id'=>$item[id],'pid'=>$item[parentid]));?>" >编辑</a>&nbsp;&nbsp;<a href="#" onclick="del_articleclass('<?php echo ($item["id"]); ?>')">删除</a>&nbsp;&nbsp;<a href="<?php echo U('articleclass/articleclasslist',array('pid'=>$item[id]));?>">管理项目</a></td>
-                                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </tbody>
-                    </table>
-                    <table id="pager"><tr><td><div class="pages"><?php echo ($page); ?></div></td></tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </form>
-</body>
-</html>
+    }
+
+    // function del_user(userid) {
+    //     var msg = window.confirm("您确定删除吗?");
+    //     if (msg) {
+    //         var url = '<?php echo U('user / deleteuser');?>';
+    //         $.post(url, {userid: userid}, function (data) {
+    //             alert(data.info);
+    //             $('#userlist').datagrid('reload');
+    //         });
+    //     }
+    //     else {
+    //         return false;
+    //     }
+    // }
+    // function restuserpwd(userid) {
+    //     var msg = window.confirm("您确定重置密码吗?");
+    //     if (msg) {
+    //         var url = '<?php echo U('
+    //         user / restuserpwd
+    //         ');?>';
+    //         var tbuserid = $("#TbUserID").attr("value");
+    //         $.post(url, {userid: userid}, function (data) {
+    //             alert(data.info);
+    //             $('#userlist').datagrid('reload');
+    //         });
+    //     }
+    //     else {
+    //         return false;
+    //     }
+    // }
+</script>
+<table id="articleclasslist"></table>
+<div id = "toolbar1" style="height:65px;">
+    <div>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="javascript:alert('Add')">添加</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="javascript:alert('Cut')">编辑</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="javascript:alert('Save')">删除</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="javascript:jumpchild()">项目管理</a>
+    </div>
+    <div>
+        &nbsp;<?php echo ($articleclassherf); ?><br>
+        &nbsp;栏目名称：<input type="text" id = "title" />&nbsp;<a href="#" class="easyui-linkbutton" iconCls = "icon-search" plain="true" onclick="javascript:doSearch();" >查询</a>
+    </div>
+</div>
