@@ -18,6 +18,7 @@ class LoginController extends Controller
 
 	public function dologin()
 	{
+        $json = '';
 		if (IS_POST) {
             $userid = I('post.txt_userid');
             $userpwd = I('post.txt_pwd');
@@ -29,13 +30,15 @@ class LoginController extends Controller
                 	session("userid",$userid);
                 	$dt=$user->where("userid='".$userid."'")->find();
                 	session("username",$dt["username"]);
-                    $this->success('登陆成功',U('index/index'),3);
+                    $json = "{'msg':'登陆成功','url':'".U('index/index')."'}";
                 	break;
                 case '2':
                     $this->error('密码错误',U('login/login'),3);
+                    $json = "{'msg':'密码错误','url':'".U('login/login')."'}";
                     break;
                 case '3':
                     $this->error('用户名错误',U('login/login'),3);
+                    $json = "{'msg':'用户名错误','url':'".U('login/login')."'}";
                     break;
                 default:
                     break;
@@ -43,8 +46,9 @@ class LoginController extends Controller
         }
         else
         {
-            $this->error('非法操作',U('login/login'),3);
+            $json = "{'msg':'非法操作','url':'".U('login/login')."'}";
         }
+        echo $json;
 	}
 }
 ?>

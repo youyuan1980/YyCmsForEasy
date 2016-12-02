@@ -1,5 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html>
+<?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
     <meta charset="utf-8">
     <title></title>

@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><script type="text/javascript">
     $(function () {
         $('#userlist').datagrid({
-            url: '<?php echo U('user/UserListForEasy');?>',
+            url: '<?php echo U('user/UserListForSearch');?>',
             fit:true,
             height: 'auto',
             fitColumns: true,
@@ -13,52 +13,16 @@
                 {field: 'userid', title: '用户ID', width: 200},
                 {field: 'username', title: '用户姓名', width: 500}
             ]],
-            toolbar: [{
-                text: '添加',
-                iconCls: 'icon-add',
-                handler: function () {
-                    $('#userlist').datagrid('endEdit', lastIndex);
-                    $('#userlist').datagrid('appendRow', {
-                        itemid: '',
-                        productid: '',
-                        listprice: '',
-                        unitprice: '',
-                        attr1: '',
-                        status: 'P'
-                    });
-                    lastIndex = $('#userlist').datagrid('getRows').length - 1;
-                    $('#userlist').datagrid('selectRow', lastIndex);
-                    $('#userlist').datagrid('beginEdit', lastIndex);
-                }
-            }, '-', {
-                text: '编辑',
-                iconCls: 'icon-edit',
-                handler: function () {
-                    var row = $('#userlist').datagrid('getSelected');
-                    if (row) {
-                        alert(row.userid);
-                    }
-                }
-            }, '-', {
-                text: '删除',
-                iconCls: 'icon-remove',
-                handler: function () {
-                    var row = $('#userlist').datagrid('getSelected');
-                    if (row) {
-                        var userid = row.userid;
-                        del_user(userid);
-                    }
-                }
-            }, '-', {
-                text: '查询',
-                iconCls: 'icon-search',
-                handler: function () {
-                    var rows = $('#userlist').datagrid('getChanges');
-                    alert('changed rows: ' + rows.length + ' lines');
-                }
-            }]
+            toolbar:"#toolbar1"
         });
     });
+
+    function doSearch()
+    {
+         $('#userlist').datagrid('load',{
+             userid: $('#userid').attr("value")
+         });
+    }
 
 
     function del_user(userid) {
@@ -95,3 +59,13 @@
     false
 </script>
 <table id="userlist"></table>
+<div id = "toolbar1" style="height:55px;">
+    <div>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="javascript:alert('Add')">添加</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="javascript:alert('Cut')">编辑</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="javascript:alert('Save')">删除</a>
+    </div>
+    <div>
+        &nbsp;用户名或用户ID：<input type="text" id = "userid" />&nbsp;<a href="#" class="easyui-linkbutton" iconCls = "icon-search" plain="true" onclick="javascript:doSearch();" >查询</a>
+    </div>
+</div>

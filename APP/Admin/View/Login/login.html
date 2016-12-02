@@ -20,12 +20,24 @@
             maximizable:false,
             closable:false
         });
+        $("#form1").form({
+            url:"{:U('login/dologin')}",
+            onSubmit:function(){
+                return $(this).form('validate');
+            },
+            success:function(data){
+                var dataObj = eval("("+data+")");
+                alert(dataObj.msg);
+                location.href = dataObj.url;
+            }
+        });
     });
+
     </script>
 </head>
 <body>
 <div id="login">
-    <form method="post" action="{:U('login/dologin')}" >
+    <form method="post" id="form1" >
         <div style="margin-top:50px;text-align:left;">
             <div style="margin-left:120px;">
                 <label for="name">用户名：</label>
