@@ -15,13 +15,15 @@ class ArticleclassController extends BaseController
 		}
 		else
 		{
-			$row=$articleclass->field('ID,TITLE')->where("ID='".$pid."'")->find();
+			$row=$articleclass->field('PARENTID,TITLE')->where("ID='".$pid."'")->find();
 			if ($row) {
-				$url=U('articleclass/articleclasslist',array('pid'=>$row["pid"]));
-				$articleclassherf="返回上级目录："."<a href='".$url."'>".$row["title"]."</a>&nbsp;&nbsp;";
+				$url=U('articleclass/articleclasslist',array('pid'=>$row["parentid"]));
+				$articleclassherf="返回上级目录："."<a onclick=\"Open('栏目列表','".$url."');\" href=\"#\">".$row["title"]."</a>&nbsp;&nbsp;";
 			}
 		}
+		$articleclassdataurl = U('articleclass/ArticleClassListForSearch',array('pid'=>$pid));
 		$this->assign('articleclassherf',$articleclassherf);
+		$this->assign('articleclassdataurl',$articleclassdataurl);
 		$this->display('articleclasslist');
 	}
 
@@ -51,34 +53,26 @@ class ArticleclassController extends BaseController
 		# code...
 		$pid=I('get.pid','-1');
 		$classid=I('get.id','');
-		if ($classid=="") {
-			# code...
-			$this->error('缺少参数',U('articleclass/articleclasslist',array("pid"=>$pid)),3);
+		$articleclass=M('article_classlist');
+		$row=$articleclass->where("id='".$classid."'")->find();
+		if ($row) {
+			$this->assign('classid',$row[id]);
+			$this->assign('title',$row[title]);
+		}
+		if ($pid=="-1") {
+			$this->assign('ptitle','根目录');
 		}
 		else
 		{
-			$articleclass=M('article_classlist');
-			$row=$articleclass->where("id='".$classid."'")->find();
+			$row=$articleclass->where("id='".$pid."'")->find();
 			if ($row) {
-				$this->assign('classid',$row[id]);
-				$this->assign('title',$row[title]);
+				$this->assign('ptitle',$row["title"]);
 			}
-			if ($pid=="-1") {
-				$this->assign('ptitle','根目录');
-			}
-			else
-			{
-				$row=$articleclass->where("id='".$pid."'")->find();
-				if ($row) {
-					$this->assign('ptitle',$row["title"]);
-				}
-			}
-			$this->assign('pid',$pid);
-			$this->assign('actionurl',U('articleclass/doedit'));
-			$this->assign('classidreadonly','readonly=true');
-			$this->assign('pagetitle','编辑栏目信息');
-			$this->display('articleclassedit');
 		}
+		$this->assign('pid',$pid);
+		$this->assign('actionurl',U('articleclass/doedit'));
+		$this->assign('classidreadonly','readonly=true');
+		$this->display('articleclassedit');
 	}
 
 	public function doedit()
@@ -87,13 +81,16 @@ class ArticleclassController extends BaseController
 		$title=I('post.title');
 		$pid=I('post.pid');
 		$articleclass=M('article_classlist');
+		echo $pid;
 		$flag=$articleclass->where("ID='".$classid."'")->setField(array("TITLE"=>$title,"UPTIME"=>date('Y-m-d H:i:s')));
 		if ($flag) {
-			$this->success("保存成功",U('articleclass/edit',array("id"=>$classid,"pid"=>$pid)),3);
+			//echo '保存成功';
+			//$this->success("保存成功",U('articleclass/edit',array("id"=>$classid,"pid"=>$pid)),3);
 		}
 		else
 		{
-			$this->error("保存失败",U('articleclass/edit',array("id"=>$classid,"pid"=>$pid)),3);
+			//echo '保存失败';
+			//$this->error("保存失败",U('articleclass/edit',array("id"=>$classid,"pid"=>$pid)),3);
 		}
 	}
 
