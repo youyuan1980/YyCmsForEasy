@@ -29,16 +29,25 @@
     {
         var pid = '<?php echo ($pid); ?>';
         var classid = '<?php echo ($classid); ?>';
-        var title = '<?php echo ($title); ?>';
+        var title = $("#alertclass_title").attr("value");
         $.ajax({
             url: '<?php echo ($actionurl); ?>',
             type: 'post',
+            async: false,
             dataType: 'text',
-            data: {'pid': pid:'classid':classid,'title':title},
+            data: {pid: pid,classid:classid,title:title},
             success:function (text) {
                 // body...
                 alert(text);
+            },
+            error:function(text){
+                alert(text);
             }
         });
+    }
+    function dialog_close()
+    {
+        $('#aticleclasslist_edit_dialog').dialog('close');
+        doSearch();
     }
 </script>

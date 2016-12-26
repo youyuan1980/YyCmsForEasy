@@ -14,7 +14,10 @@
                 {field: 'id', title: '栏目ID', width: 200},
                 {field: 'title', title: '栏目名称', width: 500}
             ]],
-            toolbar:"#toolbar1"
+            toolbar:"#toolbar1",
+            onClose:function(){
+                alert('121212');
+            }
         });
     });
 
@@ -100,7 +103,7 @@
     <div id="aticleclasslist_edit_dialog"></div>
     <div id="bb">
         <a href="#" class="easyui-linkbutton" onclick="articleclass_save();">保存</a>
-        <a href="#" class="easyui-linkbutton">关闭</a>
+        <a href="#" class="easyui-linkbutton" onclick="dialog_close();">关闭</a>
     </div>
 </div>
 </div>

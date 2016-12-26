@@ -29,17 +29,26 @@
     {
         var pid = '{$pid}';
         var classid = '{$classid}';
-        var title = '{$title}';
+        var title = $("#alertclass_title").attr("value");
         $.ajax({
             url: '{$actionurl}',
             type: 'post',
+            async: false,
             dataType: 'text',
-            data: {'pid': pid:'classid':classid,'title':title},
+            data: {pid: pid,classid:classid,title:title},
             success:function (text) {
                 // body...
                 alert(text);
+            },
+            error:function(text){
+                alert(text);
             }
         });
+    }
+    function dialog_close()
+    {
+        $('#aticleclasslist_edit_dialog').dialog('close');
+        doSearch();
     }
 </script>
 

@@ -81,15 +81,14 @@ class ArticleclassController extends BaseController
 		$title=I('post.title');
 		$pid=I('post.pid');
 		$articleclass=M('article_classlist');
-		echo $pid;
 		$flag=$articleclass->where("ID='".$classid."'")->setField(array("TITLE"=>$title,"UPTIME"=>date('Y-m-d H:i:s')));
 		if ($flag) {
-			//echo '保存成功';
+			echo '保存成功';
 			//$this->success("保存成功",U('articleclass/edit',array("id"=>$classid,"pid"=>$pid)),3);
 		}
 		else
 		{
-			//echo '保存失败';
+			echo '保存失败';
 			//$this->error("保存失败",U('articleclass/edit',array("id"=>$classid,"pid"=>$pid)),3);
 		}
 	}
