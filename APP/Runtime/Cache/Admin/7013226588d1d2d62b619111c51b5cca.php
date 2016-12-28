@@ -11,8 +11,9 @@
     <link rel="stylesheet" type="text/css" href="/yycmsforeasy/Public/jqueryeasyui/themes/icon.css">
     <script type="text/javascript">
     jQuery(document).ready(function($) {
-        $("#login").window({
+        $("#login").dialog({
             title:'登陆',
+            modal:true,
             width:500,
             height:250,
             collapsible:false,

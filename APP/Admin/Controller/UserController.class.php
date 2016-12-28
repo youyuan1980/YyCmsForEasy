@@ -17,7 +17,7 @@ class UserController extends BaseController
 		}
 		$pagesize = I('post.rows');
 		$user=M('users');
-		$tbuser=I('post.userid');
+		$tbuser=I('post.userlist_userid');
 		$count=$user->where("username like '%".$tbuser."%' or userid like '%".$tbuser."%'")
 					->count();
 		$list=$user->where("username like '%".$tbuser."%' or userid like '%".$tbuser."%'")
@@ -28,8 +28,6 @@ class UserController extends BaseController
 		$data["rows"]=$list;
 		echo json_encode($data);
 	}
-
-
 
 	public function deleteuser()
 	{
@@ -78,15 +76,18 @@ class UserController extends BaseController
 	}
 
 	public function main()
-    {
-        $UserID=session("userid");
-        $UserName=session("username");
-        $userinrole=D('Userinrole');
-        $UserRoles=$userinrole->ShowUserRoles($UserID);
-        $this->assign('UserID',$UserID);
-        $this->assign('UserName',$UserName);
-        $this->assign('UserRoles',$UserRoles);
+    {        
         $this->display('main');
+    }
+    
+    public function getuserinfo()
+    {
+        $data = array();
+        $data["userid"]=session("userid");
+        $data["username"]=session("username");        
+        $userinrole=D('Userinrole');
+        $data["userrolesname"]=$userinrole->ShowUserRoles($data["userid"]);
+        echo json_encode($data);
     }
 
 	public function updpwd()
