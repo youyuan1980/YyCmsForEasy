@@ -23,7 +23,30 @@
     }
     
     var userlist_toolbar = {
-        'add':function(){alert('adfasfdf');},
+        'add':function(){
+            $('#userlist_add').dialog({
+                title:'添加用户',
+                modal:true,
+                width:500,
+                height:250,
+                collapsible:false,
+                minimizable:false,
+                maximizable:false,
+                closable:false,
+                buttons:[{
+                    text:'保存',
+                    handler:function(){
+                        alert('保存');
+                    }
+                },{
+                    text:'取消',
+                    handler:function(){
+                        $('#userlist_add').dialog('close');
+                        $('#userlist').datagrid('reload');
+                    }
+                }]
+            });
+        },
         'edit':function(){alert('adfasdfsfsdfs');},
         'del':function(){},
         'restpassword':function(){},
@@ -65,7 +88,7 @@
 <table id="userlist"></table>
 <div id = "userlist_toolbar" style="height:55px;">
     <div>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="javascript:alert('Add')">添加</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="javascript:userlist_toolbar.add();">添加</a>
         <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="javascript:alert('Cut')">编辑</a>
         <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="javascript:alert('Save')">删除</a>
         <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="javascript:alert('Save')">重置密码</a>
@@ -73,4 +96,8 @@
     <div>
         &nbsp;用户名或用户ID：<input type="text" id = "userlist_userid" />&nbsp;<a href="#" class="easyui-linkbutton" iconCls = "icon-search" plain="true" onclick="javascript:userlist_toolbar.doSearch();" >查询</a>
     </div>
+</div>
+
+<div id = "userlist_add">
+    
 </div>
