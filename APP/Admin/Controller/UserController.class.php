@@ -4,12 +4,12 @@ use Think\Controller;
 use Think\Page;
 class UserController extends BaseController
 {
-	public function UserList()
+    public function UserList()
 	{
 		$this->display('userlist');
 	}
 
-	public function UserListForSearch()
+	public function userlistdata()
 	{
 		$p=I('post.page');
 		if ($p=="") {
@@ -32,47 +32,45 @@ class UserController extends BaseController
 	public function deleteuser()
 	{
 		$userid=I('userid');
-		$data["tbuserid"]=I('tbuserid');
+        $msg = "";
 		if (IS_AJAX) {
 			# code...
 			$user=M('users');
 			if ($user->where("userid='".$userid."'")->delete()) {
-				$data["info"]="删除成功";
+				$msg = "删除成功";
 			}
 			else
 			{
-				$data["info"]="删除失败";
+				$msg = "删除失败";
 			}
 		}
 		else
 		{
-			$data["info"]="非法操作";
+			$msg = "非法操作";
 		}
-		$this->ajaxReturn($data);
+		$this->ajaxReturn($msg);
 	}
 
 	public function restuserpwd()
 	{
 		$userid=I('userid');
-		$data["p"]=I('p');
-		$data["tbuserid"]=I('tbuserid');
+        $msg = '';
 		if (IS_AJAX) {
 			$user=M('users');
 			$pwd=md5('123');
 			if ($user->where("userid='".$userid."'")->setField('USERPASSWORD',$pwd)!==false) {
-				$data["info"]="密码重置成功，新密码为123";
+				$msg = "密码重置成功，新密码为123";
 			}
 			else
 			{
-				$data["info"]="密码重置失败";
+				$msg = "密码重置失败";
 			}
 		}
 		else
 		{
-			$data["info"]="非法操作";
+			$msg = "非法操作";
 		}
-		$data["url"]=U('user/userlist',array('p'=>$data["p"],'TbUserID'=>$data["tbuserid"]));
-		$this->ajaxReturn($data);
+		$this->ajaxReturn($msg);
 	}
 
 	public function main()
@@ -128,15 +126,16 @@ class UserController extends BaseController
     public function edit()
     {
     	# code...
+        $data = array();
     	$userid=I('get.userid');
     	$this->userid=$userid;
-    	$this->title="编辑用户信息";
     	$user=M('users');
     	$row=$user->field('userid,username')
     			  ->where("userid='".$userid."'")
     			  ->find();
     	if ($row) {
-    		$this->username=$row["username"];
+            $data["username"] = $row["username"];
+            $data["userid"] = $row["userid"];
     	}
     	$roles=M('roles');
     	$rolerows=$roles->field("roleid,rolename,'' as ischecked")
@@ -154,77 +153,89 @@ class UserController extends BaseController
     			}
     		}
     	}
-    	$this->useridreadonly='readonly=true';
-    	$this->actionurl=U('user/doedit',array('userid'=>$userid));
-    	$this->rolelist=$rolerows;
-    	$this->display('useredit');
+        $data["roles"] = $rolerows;
+        echo json_encode($data);
     }
 
-    public function doedit()
+    public function edituser()
     {
-    	$userid=I('post.userid');
-    	$username=I('post.username');
-    	$chkroles=I('post.chkroles');
-    	$user=M('users');
-    	if ($user->where("userid='".$userid."'")->setField("USERNAME",$username)!==false) {
-    		$userinrole=M('userinrole');
-    		$userinrole->where("USERID='".$userid."'")->delete();
-    		foreach ($chkroles as $row) {
-    			$userrole["USERID"]=$userid;
-    			$userrole["ROLEID"]=$row;
-    			$userinrole->data($userrole)->add();
-    		}
-    		$this->success('保存成功',U('user/edit',array('userid'=>$userid)),3);
-    	}
-    	else
-    	{
-    		$this->error('修改失败',U('user/edit',array('userid'=>$userid)),3);
-    	}
-    }
-
-    public function add()
-    {
-        $this->title="添加用户信息";
-        $roles=M('roles');
-        $rolerows=$roles->field("roleid,rolename,'' as ischecked")
-                        ->order('ordernum')
-                        ->select();
-        $this->actionurl=U('user/doadd');
-        $this->rolelist=$rolerows;
-        $this->display('useredit');
-    }
-
-    public function doadd()
-    {
-        $userid=I('post.userid');
-        $username=I('post.username');
-        $chkroles=I('post.chkroles');
-        $user=M('users');
-        $data["USERID"]=$userid;
-        $data["USERNAME"]=$username;
-        $data["USERPASSWORD"]=md5('123');
-        $count=$user->where("USERID='".$userid."'")->count();
-        if ($count==0) {
-            if ($user->data($data)->add()!==false) {
+        $msg = '';
+        if (IS_AJAX) {
+            $userid=I('post.userid');
+            $username=I('post.username');
+            $chkroles=I('post.roles');
+            $user=M('users');
+            if ($user->where("userid='".$userid."'")->setField("USERNAME",$username)!==false) {
                 $userinrole=M('userinrole');
                 $userinrole->where("USERID='".$userid."'")->delete();
-                foreach ($chkroles as $row) {
+                $roles = explode(',',$chkroles);
+                foreach ($roles as $row) {
                     $userrole["USERID"]=$userid;
                     $userrole["ROLEID"]=$row;
                     $userinrole->data($userrole)->add();
                 }
-                $this->success('保存成功',U('user/add'),3);
+                $msg = '保存成功';
             }
             else
             {
-                $this->error('修改失败',U('user/add'),3);
+                $msg = '修改失败';
             }
         }
         else
         {
-            $this->error('用户名已存在',U('user/add'),3);
+            $msg = '非法操作';
         }
+        $this->ajaxReturn($msg);
+    }
 
+    public function add()
+    {
+        $roles=M('roles');
+        $rolerows=$roles->field("roleid,rolename")
+                        ->order('ordernum')
+                        ->select();
+        echo json_encode($rolerows);
+    }
+
+    public function adduser()
+    {
+        $msg = '';
+        if (IS_AJAX) {
+            $userid=I('post.userid');
+            $username=I('post.username');
+            $chkroles=I('post.roles');
+            $user=M('users');
+            $data["USERID"]=$userid;
+            $data["USERNAME"]=$username;
+            $data["USERPASSWORD"]=md5('123');
+            $count=$user->where("USERID='".$userid."'")->count();
+            if ($count==0) {
+                if ($user->data($data)->add()!==false) {
+                    $userinrole=M('userinrole');
+                    $userinrole->where("USERID='".$userid."'")->delete();
+                    $roles = explode(',',$chkroles);
+                    foreach ($roles as $row) {
+                        $userrole["USERID"]=$userid;
+                        $userrole["ROLEID"]=$row;
+                        $userinrole->data($userrole)->add();
+                    }
+                    $msg = '保存成功';
+                }
+                else
+                {
+                    $msg = '修改失败';
+                }
+            }
+            else
+            {
+                $msg = '用户名已存在';
+            }
+        }
+        else
+        {
+            $msg = '非法操作';
+        }
+        $this->ajaxReturn($msg);
     }
 }
 ?>

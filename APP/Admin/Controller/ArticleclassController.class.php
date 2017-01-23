@@ -4,48 +4,23 @@ use Think\Controller;
 use Think\Page;
 class ArticleclassController extends BaseController
 {
+    public function datalist(){
+        $json = "";
+        $articleclass = M('article_classlist');
+        $row = $articleclass->field('ID,TITLE,PARENTID')->select();
+        $json = $json ."[";
+        $json = $json ."{\"id\":\"-1\",\"name\":\"根目录\",\"pId\":\"0\",\"isParent\":\"true\",\"open\":\"true\"}";
+        for($i= 0;$i < count($row);$i++)
+        {
+            $json = $json .",{\"id\":\"".$row[$i]["id"]."\",\"name\":\"".$row[$i]["title"]."\",\"pId\":\"".$row[$i]["parentid"]."\",\"isParent\":\"false\",\"open\":\"true\"}";
+        }
+        $json = $json ."]";
+        echo $json;
+    }
+
 	public function ArticleClassList()
 	{
-		$pid=I('get.pid','-1');
-		$articleclassherf="";
-		$articleclass=M('article_classlist');
-		if ($pid=="-1") {
-			# code...
-			$articleclassherf="上级目录：根目录";
-		}
-		else
-		{
-			$row=$articleclass->field('PARENTID,TITLE')->where("ID='".$pid."'")->find();
-			if ($row) {
-				$url=U('articleclass/articleclasslist',array('pid'=>$row["parentid"]));
-				$articleclassherf="返回上级目录："."<a onclick=\"Open('栏目列表','".$url."');\" href=\"#\">".$row["title"]."</a>&nbsp;&nbsp;";
-			}
-		}
-		$articleclassdataurl = U('articleclass/ArticleClassListForSearch',array('pid'=>$pid));
-		$this->assign('articleclassherf',$articleclassherf);
-		$this->assign('articleclassdataurl',$articleclassdataurl);
 		$this->display('articleclasslist');
-	}
-
-	public function ArticleClassListForSearch()
-	{
-		$p=I('post.page');
-		if ($p=="") {
-			$p=1;
-		}
-		$pid=I('get.pid','-1');
-		$pagesize = I('post.rows');
-		$articleclass=M('article_classlist');
-		$title=I('post.title');
-		$count=$articleclass->where("title like '%".$title."%' and parentid =".$pid)
-					->count();
-		$list=$articleclass->where("title like '%".$title."%' and parentid = ".$pid )
-			->order('uptime desc')
-			->page($p.','.$pagesize)
-			->select();
-		$data["total"]=$count;
-		$data["rows"]=$list;
-		echo json_encode($data);
 	}
 
 	public function edit()
