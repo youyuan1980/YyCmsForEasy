@@ -3,14 +3,16 @@ namespace Admin\Controller;
 use Think\Controller;
 class IndexController extends BaseController {
     public function index(){
-    	$userid=session("userid");
-        $db=D('menu');
-        $json=$db->ShowMenuByJson($userid);
-        $this->assign('json',$json);
         $this->assign('username',session("username"));
         $this->display('index');
     }
 
+    public function lefttree(){
+        $userid=session("userid");
+        $db=D('menu');
+        $json=$db->ShowMenuByJson($userid);
+        echo $json;
+    }
     public function main()
     {
         $UserID=session("userid");

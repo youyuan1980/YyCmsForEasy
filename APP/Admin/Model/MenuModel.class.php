@@ -24,12 +24,12 @@ class MenuModel extends Model
 	        $name = $row["name"];
 	        $isparent = "";
 	        if ($row["isparent"]=="1") {
-	            $isparent = ",isParent:true";
+	            $isparent = ",\"isParent\":\"true\"";
 	        }
             if ($row["url"]!="") {
-                $url=",myurl:\"" . U($row["url"]) . "\",";
+                $url=",\"myurl\":\"" . U($row["url"]) . "\"";
             }
-	        $json = $json."{\"id\":\"" . $id . "\",\"pId\":\"" . $pid . "\",open:true,\"name\":\"" . $name . "\"" . $isparent . $url . "}";
+	        $json = $json."{\"id\":\"" . $id . "\",\"pId\":\"" . $pid . "\",\"open\":\"true\",\"name\":\"" . $name . "\"" . $isparent . $url . "}";
     	}
     	$json=$json.']';
 		return $json;

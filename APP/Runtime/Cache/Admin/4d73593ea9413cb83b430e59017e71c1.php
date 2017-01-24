@@ -20,14 +20,28 @@
             }
         };
 
-        $(document).ready(function () {
-            $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+        $(document).ready(function(){
+            $.ajax({
+                url:"<?php echo U('index/lefttree');?>",
+                async:false,
+                type:'get',
+                dataType:'json',
+                success:function(text)
+                {
+                    $.fn.zTree.init($("#treeDemo"), setting, text);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert(textStatus);
+                }
+            });
         });
-        var zNodes = <?php echo ($json); ?>;
+
         function zTreeOnClick(event, treeId, treeNode) {
             Open(treeNode.name, treeNode.myurl);
-        }
-        ;
+        };
+
         function Open(text, url) {
             $("#p").panel({
                 title:text,
