@@ -1,25 +1,11 @@
 <?php if (!defined('THINK_PATH')) exit();?><script type="text/javascript">
-    $(function () {
-        userlist_dataBinder();
+    $(document).ready(function () {
+       userlist_dataBinder();
     });
 
     function userlist_dataBinder()
     {
-        $('#userlist').datagrid({
-            url: "<?php echo U('user/userlistdata');?>",
-            fit:true,
-            height: 'auto',
-            fitColumns: true,
-            singleSelect: true,
-            pageSize: 10,
-            pageList: [10],
-            pagination: true,
-            columns: [[
-                {field: 'userid', title: '用户ID', width: 200},
-                {field: 'username', title: '用户姓名', width: 500}
-            ]],
-            toolbar:"#userlist_toolbar"
-        });
+        user.dataBinder("<?php echo U('user/userlistdata');?>");
     }
 
     var userlist_toolbar = {

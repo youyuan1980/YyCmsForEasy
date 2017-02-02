@@ -25,20 +25,7 @@
     </tr>
 </table>
 <script>
-    $(function(){        
-        $.ajax({
-            url:"<?php echo U('user/getuserinfo');?>",
-            async:false,
-            type:'get',
-            dataType:'json',
-            success:function(text){
-                $("#main_userid").html(text.userid);
-                $("#main_username").html(text.username);
-                $("#main_userroles").html(text.userrolesname);
-            },
-            error:function(text){
-                alert(text);
-            }
-        });
+    $(document).ready(function () {
+        user.main("<?php echo U('user/getuserinfo');?>");
     });
 </script>

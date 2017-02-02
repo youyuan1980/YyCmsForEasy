@@ -1,55 +1,38 @@
-//删除用户
-function del_user(userid)
-{
-    var isdel = window.confirm("您确定删除吗?");
-    if (isdel) {
+var user = (function () {
+    //显示用户信息页面
+    var main = function (url) {
         $.ajax({
-            url: "../Dal/userajax.php?&userid="+userid+"&action=del&time=" + new Date().getTime(),
-            dataType: "text",
-            async: false,
-            error: function (text) {
-                alert("error");
+            url:url,
+            async:false,
+            type:'get',
+            dataType:'json',
+            success:function(text){
+                $("#main_userid").html(text.userid);
+                $("#main_username").html(text.username);
+                $("#main_userroles").html(text.userrolesname);
             },
-            success: function (text) {
-                search();            
+            error:function(text){
+                alert(text);
             }
         });
-    }
-} 
-
-function resetpassowrd(userid)
-{
-    var isrest = window.confirm("您确定重置密码为123吗?");
-    if (isrest) {
-        $.ajax({
-            url: "../Dal/userajax.php?&userid="+userid+"&action=restpassword&time=" + new Date().getTime(),
-            dataType: "text",
-            async: false,
-            error: function (text) {
-                alert("error");
-            },
-            success: function (text) {
-                search();            
-            }
+    };
+    //用户列表绑定
+    var dataBinder = function (url) {
+        $('#userlist').datagrid({
+            url: url,
+            fit:true,
+            height: 'auto',
+            fitColumns: true,
+            singleSelect: true,
+            pageSize: 10,
+            pageList: [10],
+            pagination: true,
+            columns: [[
+                {field: 'userid', title: '用户ID', width: 200},
+                {field: 'username', title: '用户姓名', width: 500}
+            ]],
+            toolbar:"#userlist_toolbar"
         });
     }
-}
-
-//查询用户
-function search()
-{            
-    userlist.KeyColumnName = "userid";
-    userlist.CaptionColumnString = "用户ID,用户姓名";
-    userlist.ColumnString = "userid,username";
-    userlist.TableId = "userlist";
-    userlist.PagerId = "pager";
-    userlist.PageSize = 10;
-    userlist.ObjectName='userlist';
-    userlist.url = "../Dal/userajax.php?action=list&UserName="+escape($("#TbUserID").attr("value"));
-    userlist.PageIndex = 1;
-    userlist.IsShowPager=true;
-    userlist.CaptionColumnString_Custom="操作";
-    userlist.ColumnString_Custom="<a href=\"useredit.php?userid={userid}&username={username}\">编辑</a>&nbsp;<a href=\"#\" style=\"cursor:pointer;\" onclick=\"del_user('{userid}')\" >删除</a>&nbsp;<a href=\"#\" style=\"cursor:pointer;\" onclick=\"resetpassowrd('{userid}')\" >重置密码</a>";
-    userlist.Show();
-}  
-
+    return {main : main,dataBinder:dataBinder};
+})();

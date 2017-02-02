@@ -8,46 +8,12 @@
     <script type="text/javascript" src="/yycmsforeasy/Public/zTree/js/jquery.ztree.core-3.5.js"></script>
     <link rel="stylesheet" type="text/css" href="/yycmsforeasy/Public/jqueryeasyui/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="/yycmsforeasy/Public/jqueryeasyui/themes/icon.css">
+    <script type="text/javascript" src="/yycmsforeasy/Public/Script/user.js"></script>
+    <script type="text/javascript" src="/yycmsforeasy/Public/Script/index.js"></script>
     <script type="text/javascript">
-        var setting = {
-            data: {
-                simpleData: {
-                    enable: true
-                }
-            },
-            callback: {
-                onClick: zTreeOnClick
-            }
-        };
-
         $(document).ready(function(){
-            $.ajax({
-                url:"<?php echo U('index/lefttree');?>",
-                async:false,
-                type:'get',
-                dataType:'json',
-                success:function(text)
-                {
-                    $.fn.zTree.init($("#treeDemo"), setting, text);
-                },
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    alert(XMLHttpRequest.status);
-                    alert(XMLHttpRequest.readyState);
-                    alert(textStatus);
-                }
-            });
+            index.init("<?php echo U('index/lefttree');?>");
         });
-
-        function zTreeOnClick(event, treeId, treeNode) {
-            Open(treeNode.name, treeNode.myurl);
-        };
-
-        function Open(text, url) {
-            $("#p").panel({
-                title:text,
-                fit:true
-            }).panel('refresh',url);
-        }
     </script>
 </head>
 <body class="easyui-layout">
