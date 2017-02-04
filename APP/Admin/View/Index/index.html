@@ -6,15 +6,23 @@
     <script type="text/javascript" src="__PUBLIC__/jqueryeasyui/jquery.easyui.min.js"></script>
     <link rel="stylesheet" href="__PUBLIC__/zTree/css/zTreeStyle/zTreeStyle.css" type="text/css">
     <script type="text/javascript" src="__PUBLIC__/zTree/js/jquery.ztree.core-3.5.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/zTree/js/jquery.ztree.excheck.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/zTree/js/jquery.ztree.exedit.js"></script>
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/jqueryeasyui/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/jqueryeasyui/themes/icon.css">
+    <script type="text/javascript" src="__PUBLIC__/Script/Common.js"></script>
     <script type="text/javascript" src="__PUBLIC__/Script/user.js"></script>
     <script type="text/javascript" src="__PUBLIC__/Script/index.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Script/article.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             index.init("{:U('index/lefttree')}");
         });
     </script>
+    <style type="text/css">
+        .ztree li span.button.add {margin-left:2px; margin-right: -1px; background-position:-144px 0; vertical-align:top; *vertical-align:middle}
+	</style>
+
 </head>
 <body class="easyui-layout">
 <form id="form1">

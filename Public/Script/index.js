@@ -1,7 +1,7 @@
 /**
  * Created by youyuan1980 on 17-1-29.
  */
-var index = function () {
+var index = (function () {
     var zTreeOnClick = function(event, treeId, treeNode) {
         Open(treeNode.name, treeNode.myurl);
     };
@@ -40,5 +40,5 @@ var index = function () {
         });
     }
     return {init:init,Open:Open};
-}();
+})();
 
